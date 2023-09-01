@@ -30,10 +30,11 @@ def password_evaluator(pwd):
 
 def password_advisor(pwd):
     if not password_evaluator(pwd):
-        return "<h1>Password is strong!</h1>"
+        return "Password is strong!", ""
 
     issues = password_evaluator(pwd)
     new_line = '\n'
+    password_condition = "Password is weak! It is highly recommended to strengthen your password."
+    issues = f"{new_line.join(str(issues.index(x) + 1) + '.' + x for x in issues)}"
 
-    return f"<h1>Password is weak! It is highly recommended to strengthen your password.</h1>\n<h2>Issues:</h2>\n" \
-           f"<h3>{new_line.join(str(issues.index(x) + 1) + '.' + x for x in issues)}</h3>".replace("\n", "<br>")
+    return password_condition, issues
