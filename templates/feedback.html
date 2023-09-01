@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styling.css') }}">
+</head>
+<body>
+    <main>
+        <h1>{{ pwd_condition }}</h1>
+        <!-- <h2> -->
+        {% for issue in pwd_issues %}
+        <li>{{issue}}</li>
+        {% endfor %}
+        
+            <!-- {% autoescape false %}
+            {{ pwd_issues }}
+            {% endautoescape %} -->
+        <!-- </h2> -->
+    </main>
+</body>
+</html>
