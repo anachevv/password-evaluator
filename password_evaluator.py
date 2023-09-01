@@ -35,6 +35,6 @@ def password_advisor(pwd):
     issues = password_evaluator(pwd)
     new_line = '\n'
     password_condition = "Password is weak! It is highly recommended to strengthen your password."
-    issues = f"{new_line.join(str(issues.index(x) + 1) + '.' + x for x in issues)}"
+    issues = f"{new_line.join(x for x in issues)}"
 
     return password_condition, issues
