@@ -1,0 +1,1 @@
+# A simple Flask application that checks the strength of a given password.
