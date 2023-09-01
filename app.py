@@ -14,9 +14,11 @@ def index():
 @app.route("/get_password", methods=["POST"])
 def get_password():
     pwd = request.form["user_input"]
-    result = password_advisor(pwd)
-    
-    return result
+    pwd_condition = password_advisor(pwd)[0]
+    pwd_issues = password_advisor(pwd)[1]
+
+    return render_template("get_password.html", pwd_condition=pwd_condition, pwd_issues=pwd_issues)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
