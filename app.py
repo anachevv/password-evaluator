@@ -17,7 +17,7 @@ def get_password():
     pwd_condition = password_advisor(pwd)[0]
     pwd_issues = password_advisor(pwd)[1]
 
-    return render_template("get_password.html", pwd_condition=pwd_condition, pwd_issues=pwd_issues)
+    return render_template("feedback.html", pwd_condition=pwd_condition, pwd_issues=pwd_issues.split("\n"))
 
 
 if __name__ == "__main__":
