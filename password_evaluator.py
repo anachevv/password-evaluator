@@ -13,16 +13,16 @@ def password_evaluator(pwd):
 
     issues = []
     if not recommended_length:
-        message = "Password must contain 12 or more characters."
+        message = "Password must contain at least 12 characters."
         issues.append(message)
     if not alternating_caps:
-        message = "Password must contain 1 or more uppercase letters."
+        message = "Password must contain at least 1 uppercase letter."
         issues.append(message)
     if not include_numbers:
-        message = "Password must contain 2 or more digits."
+        message = "Password must contain at least 2 digits."
         issues.append(message)
     if not include_special_chars:
-        message = "Password must contain 1 or more special symbols."
+        message = "Password must contain at least 1 special symbol."
         issues.append(message)
 
     return issues
