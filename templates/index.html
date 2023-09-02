@@ -5,18 +5,19 @@
     <title>Password Strength Checker</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='styling.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap" rel="stylesheet">
 </head>
-<body class="b1">
-    <main class="m1">
-        <div class="container">
-            <div class="box">
-                <h1>Password Evaluator</h1>
-                <form action="/get_password" method="post">
-                    <input type="text" id="user_input" name="user_input" placeholder="Password" required><br>
-                    <button type="submit" class="primary-button submit-button">Submit</button>
-                </form>
-            </div>            
-        </div>
-    </main>
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>Is My Password Secure?</h1>
+            <form action="/get_password" method="post">
+                <input type="password" id="user_input" name="user_input" placeholder="Password" required><br>
+                <button type="submit" class="primary-button submit-button">Submit</button>
+            </form>
+        </div>            
+    </div>
 </body>
 </html>
