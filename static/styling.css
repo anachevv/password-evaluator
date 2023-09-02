@@ -5,8 +5,9 @@
     height: 100%;
     background: url("../static/security.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: 50% 40%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 60%;
 }
 
 .m1 {
@@ -69,4 +70,23 @@ input[type=text] {
     display: block;
     margin-top: 20px;
     margin-bottom: 10px;
+}
+
+
+/* Media Screen */
+
+@media (max-width: 768px) {
+    .box {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .m1 {
+        padding-top: 100px;
+    }
+    .box {
+        width: 100%;
+    }
 }
