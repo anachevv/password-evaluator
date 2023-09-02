@@ -5,18 +5,16 @@
     <title>Feedback</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styling.css') }}">
 </head>
-<body>
-    <main>
+<body class="b2">
+    <main class="m2">
         <h1>{{ pwd_condition }}</h1>
-        <!-- <h2> -->
-        {% for issue in pwd_issues %}
-            <li>{{issue}}</li>
-        {% endfor %}
-        
-            <!-- {% autoescape false %}
-            {{ pwd_issues }}
-            {% endautoescape %} -->
-        <!-- </h2> -->
+        <h3>
+            {% if pwd_condition != "Password is strong!": %}
+                {% for issue in pwd_issues %}
+                    <li>{{ issue }}</li>
+                {% endfor %}
+            {% endif %}
+        </h3>
     </main>
 </body>
 </html>
