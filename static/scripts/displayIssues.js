@@ -28,7 +28,7 @@ function validatePassword() {
                 message.textContent = issue;
                 validationMessages.appendChild(message);
             });
-            validationMessages.style.color = "red";
+            validationMessages.style.color = "salmon";
         }
     })
     .catch(error => {
