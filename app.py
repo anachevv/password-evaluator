@@ -28,15 +28,14 @@ def index():
 def validate_password():
     try:
         data = request.get_json()
-        app.logger.debug("Received JSON data: %s", data)
         pwd = data.get("password")
 
         pwd_condition, pwd_issues = password_advisor(pwd)
 
         if not pwd_issues:
-            return jsonify({"message": pwd_condition}), 200
+            return jsonify({"message": pwd_condition, "issues": ""}), 200
         else:
-            return jsonify({"message": pwd_condition, "issues": pwd_issues}), 200
+            return jsonify({"message": "Password is weak! It is highly recommended to strengthen your password.", "issues": pwd_issues}), 200
     except Exception as e:
         app.logger.error("Error processing JSON data: %s", str(e))
         return jsonify({"message": "Internal server error"}), 500
