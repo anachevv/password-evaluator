@@ -83,5 +83,6 @@ input[type=password] {
 
 
 #password-validation-result {
-    color: red;
+    color: salmon;
+    font-size: 25px;
 }
