@@ -51,15 +51,16 @@ input[type=password] {
     color: black;
 }
 
-#down-arrow {
-    margin: auto;
-    display: block;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    color: #fff;
-    rotate: -90deg;
-    width: 50px;
-    height: 50px;
+
+#password-validation-result {
+    color: salmon;
+    font-size: 25px;
+    text-align: center;
+}
+
+#eye-open {
+    color: white;
+    cursor: pointer;
 }
 
 
@@ -79,11 +80,4 @@ input[type=password] {
     .box {
         width: 100%;
     }
-}
-
-
-#password-validation-result {
-    color: salmon;
-    font-size: 25px;
-    text-align: center;
 }
