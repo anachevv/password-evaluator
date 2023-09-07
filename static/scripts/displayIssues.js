@@ -4,6 +4,7 @@ function validatePassword() {
 
     if (password.trim() === "") {
         validationMessages.textContent = ''; // Clear any previous validation messages
+        validationMessages.style.paddingTop = "0px";
         return;
     }
 
@@ -20,6 +21,7 @@ function validatePassword() {
         if (data.message === "Password is strong!") {
             validationMessages.textContent = data.message;
             validationMessages.style.color = "green";
+            validationMessages.style.paddingTop = "20px";
         } else if (data.message === "Password is weak! It is highly recommended to strengthen your password.") {
             validationMessages.innerHTML = ''; // Clear previous validation messages
             const issuesArray = data.issues.split('\n');
