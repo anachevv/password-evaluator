@@ -36,19 +36,47 @@ input[type=password] {
 
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
     padding-top: 250px;
-}
-
-.box h1 {
     text-align: center;
 }
 
-.box a {
-    font-weight: bold;
+.container h1 {
+    font-size: 3em;
+    color: #fff;
+    font-family: HCo Gotham SSm, Arial, sans-serif;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.input-container input[type=password] {
+    padding-right: 40px;
+    padding: 10px;
+    /* font-size: 30px; */
+    font-family: 'Mulish', sans-serif;
+    border-radius: 5px;
+    border: 1px solid grey;
+    width: 100%;
+    margin-bottom: 10px;
+    text-transform: none;
+}
+
+.input-container #eye-open {
+    position: absolute;
+    right: 10px;
+    top: 45%;
+    transform: translateY(-50%);
     color: black;
+    cursor: pointer;
 }
 
 
