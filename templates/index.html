@@ -12,15 +12,17 @@
 </head>
 <body>
     <div class="container">
-        <div class="box">
-            <h1>Is My Password Secure?</h1>
-            <form action="/validate_password" method="post">
-                <input type="password" id="user_input" name="user_input" placeholder="Password" required><br>
-                <svg xmlns="http://www.w3.org/2000/svg" id="eye-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-                <div id="password-validation-result"></div>
-            </form>
-        </div>
+        <h1>Is My Password Secure?</h1>
+        <form action="/validate_password" method="post">
+            <div class="input-container">
+                <input type="password" id="user_input" name="user_input" size="30px" placeholder="Password" required>
+                <svg xmlns="http://www.w3.org/2000/svg" id="eye-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle>
+                </svg>
+            </div>
+            <div id="password-validation-result"></div>
+        </form>
     </div>
+    
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
