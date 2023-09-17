@@ -70,7 +70,7 @@ input[type=password] {
     text-transform: none;
 }
 
-.input-container #eye-open {
+.input-container #eye-close {
     position: absolute;
     right: 10px;
     top: 45%;
@@ -86,7 +86,7 @@ input[type=password] {
     text-align: center;
 }
 
-#eye-open {
+#eye-close {
     color: white;
     cursor: pointer;
 }
