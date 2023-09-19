@@ -16,8 +16,7 @@
         <form action="/validate_password" method="post">
             <div class="input-container">
                 <input type="password" id="user_input" name="user_input" size="30px" placeholder="Password" required>
-                <svg xmlns="http://www.w3.org/2000/svg" id="eye-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle>
-                </svg>
+                <img src="../static/images/eye-close.png" id="eye-icon">
             </div>
             <div id="password-validation-result"></div>
         </form>
@@ -28,6 +27,19 @@
         document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('user_input').addEventListener('input', validatePassword);
         });
+
+        const eyeicon = document.getElementById("eye-icon");
+        const pwd = document.getElementById("user_input");
+
+        eyeicon.onclick = function(){
+            if (pwd.type == "password") {
+                pwd.type = "text";
+                eyeicon.src = "../static/images/eye-open.png";
+            } else {
+                pwd.type = "password";
+                eyeicon.src = "../static/images/eye-close.png";
+            }
+        }
     </script>
 
 </body>
