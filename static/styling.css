@@ -73,7 +73,6 @@ input[type=password] {
 .input-container #eye-icon {
     position: absolute;
     right: 10px;
-    /* top: 45%; */
     top: 50%;
     transform: translateY(-50%);
     color: black;
